@@ -37,6 +37,11 @@ yarn-error.log
 testem.log
 /typings
 
+# Exclusions supplémentaires
+package-lock.json  # Exclure le fichier de verrouillage des dépendances
+.env               # Si tu utilises des variables d'environnement
+*.log              # Exclure tous les fichiers logs
+
 # System files
 .DS_Store
 Thumbs.db
