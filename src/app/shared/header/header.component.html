@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/">Trouve Ton Artisan</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Ouvrir le menu de navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link" routerLink="/batiment">Bâtiment</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/fabrication">Fabrication</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/alimentation">Alimentation</a></li>
+      </ul>
+      <form class="d-flex">
+        <label for="search-bar" class="visually-hidden">Rechercher un artisan</label>
+        <input id="search-bar" class="form-control me-2" type="search" name="search"
+                placeholder="Rechercher un artisan..." [(ngModel)]="searchQuery"
+                (input)="searchArtisans()" aria-label="Champ de recherche">
+      </form>
+    </div>
+  </div>
+</nav>

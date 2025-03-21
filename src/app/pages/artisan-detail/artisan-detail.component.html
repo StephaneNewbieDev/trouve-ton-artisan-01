@@ -1,0 +1,36 @@
+<div class="container mt-4">
+  <div *ngIf="artisan">
+    <div class="card">
+      <img [src]="artisan.photo" class="card-img-top" alt="Photo de {{ artisan.nom }}">
+      <div class="card-body">
+        <h2 class="card-title">{{ artisan.nom }}</h2>
+        <h5 class="text-muted">{{ artisan.specialite }}</h5>
+        <p>{{ artisan.description }}</p>
+        <p><strong>Localisation :</strong> {{ artisan.ville }}</p>
+
+        <hr>
+        <h4>Contactez cet artisan</h4>
+        <form (ngSubmit)="envoyerMessage()">
+          <div class="mb-3">
+            <label for="nom" class="form-label">Votre nom</label>
+            <input type="text" id="nom" class="form-control" [(ngModel)]="nom" name="nom" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="objet" class="form-label">Objet</label>
+            <input type="text" id="objet" class="form-control" [(ngModel)]="objet" name="objet" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="message" class="form-label">Votre message</label>
+            <textarea id="message" class="form-control" rows="4" [(ngModel)]="message" name="message" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Envoyer</button>
+        </form>
+
+        <p *ngIf="messageEnvoye" class="text-success mt-2">Votre message a bien été envoyé !</p>
+      </div>
+    </div>
+  </div>
+</div>

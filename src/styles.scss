@@ -1,1 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.btn-primary {
+    background-color: #00497c; // ✅ Améliore le contraste
+    border-color: #00497c;
+}
+.btn-primary:hover {
+    background-color: #0074c7;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 10px;
+    background: #00497c;
+    color: white;
+    padding: 10px;
+    z-index: 100;
+}
+.skip-link:focus {
+    top: 10px;
+}
